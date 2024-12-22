@@ -63,7 +63,10 @@ export default {
       "--social-github": "#1B1F23",
     },
     fontFamily: {
-      sans: ["Cairo"],
+      sans: ["Cairo", "El Messiri", "Rakkas"],
+      Cairo: ["Cairo"],
+      ElMessiri: ["El Messiri"],
+      Amiri: ["Amiri"],
     },
     extend: {},
   },
