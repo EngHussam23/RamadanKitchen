@@ -1,11 +1,14 @@
+import AngleLeft from "../assets/Icons/AngleLeft";
+import AngleRight from "../assets/Icons/AngleRight";
+
 const Popular = () => {
   return (
     <section className="flex flex-col items-start justify-center p-6 gap-4">
       <p>وصفات شائعة</p>
-      <div className="flex w-full gap-5 overflow-x-scroll overflow-y-hidden scrollbar">
+      <div className="flex items-center w-full gap-5 overflow-x-scroll overflow-y-hidden scrollbar relative">
         {FoodImages.map((image) => (
           <div className="flex flex-col min-w-fit bg-center bg-contain relative rounded-lg overflow-hidden">
-            <p className="flex items-end justify-center absolute w-full bottom-0 -bg--black bg-opacity-50 font-semibold text-xl px-8 py-4 -text--white">
+            <p className="flex items-end justify-center absolute w-full bottom-0 -bg--black bg-opacity-50 font-semibold text-xl px-8 py-4 -text--white hover:-bg--Amber hover:bg-opacity-50 cursor-pointer">
               {image.name}
             </p>
             <img
@@ -15,6 +18,12 @@ const Popular = () => {
             />
           </div>
         ))}
+        <div className="-bg--black w-fit h-fit rounded-full p-1 bg-opacity-50 right-0 absolute hover:-bg--Amber cursor-pointer">
+          <AngleRight size={32} color="#fff" />
+        </div>
+        <div className="-bg--black w-fit h-fit rounded-full p-1 bg-opacity-50 left-0 absolute hover:-bg--Amber cursor-pointer">
+          <AngleLeft size={32} color="#fff" />
+        </div>
       </div>
     </section>
   );
