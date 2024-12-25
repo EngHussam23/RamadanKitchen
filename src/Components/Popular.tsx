@@ -1,25 +1,24 @@
-const Hero = () => {
+const Popular = () => {
   return (
-    <div className="flex relative w-full">
-      <div className="flex items-center justify-start w-full h-full absolute -bg--black bg-opacity-50 px-8">
-        <p className="font-semibold text-3xl -text--white">
-          أشهى وصفات لست الكل
-        </p>
-      </div>
-      <div className="flex overflow-x-scroll overflow-y-hidden scrollbar">
+    <section className="flex flex-col items-start justify-center p-6 gap-4">
+      <p>وصفات شائعة</p>
+      <div className="flex w-full gap-5 overflow-x-scroll overflow-y-hidden scrollbar">
         {FoodImages.map((image) => (
-          <img
-            src={image.url}
-            alt={image.name}
-            className="w-96 h-60 bg-center bg-contain"
-          />
+          <div className="flex flex-col min-w-fit bg-center bg-contain relative rounded-lg overflow-hidden">
+            <p className="flex items-end justify-center absolute w-full bottom-0 -bg--black bg-opacity-50 font-semibold text-xl px-8 py-4 -text--white">
+              {image.name}
+            </p>
+            <img
+              src={image.url}
+              alt={image.name}
+              className="bg-center bg-auto w-64 h-48"
+            />
+          </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
-
-//test
 
 const FoodImages = [
   {
@@ -64,4 +63,4 @@ const FoodImages = [
   },
 ];
 
-export default Hero;
+export default Popular;

@@ -1,8 +1,8 @@
 const GeneratorForm = () => {
   return (
-    <form className="max-w-screen-2xl min-w-screen-MobileSM font-normal">
+    <form className="max-w-screen-2xl min-w-screen-MobileSM font-normal p-6">
       <label>
-        <p>أهلاً يا ست الكل! محتارة شو طبخة اليوم؟</p>
+        <p>محتارة شو طبخة اليوم؟</p>
         <textarea
           name="Ingredients"
           id="Ingredients"
