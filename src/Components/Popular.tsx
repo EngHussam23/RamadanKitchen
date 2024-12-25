@@ -3,9 +3,9 @@ import AngleRight from "../assets/Icons/AngleRight";
 
 const Popular = () => {
   return (
-    <section className="flex flex-col items-start justify-center p-6 gap-4">
+    <section className="flex flex-col items-start justify-center px-6 gap-4 overflow-visible">
       <p>وصفات شائعة</p>
-      <div className="flex items-center w-full gap-5 overflow-x-scroll overflow-y-hidden scrollbar relative">
+      <div className="flex items-center w-full gap-5 overflow-y-auto relative">
         {FoodImages.map((image) => (
           <div className="flex flex-col min-w-fit bg-center bg-contain relative rounded-lg overflow-hidden">
             <p className="flex items-end justify-center absolute w-full bottom-0 -bg--black bg-opacity-50 font-semibold text-xl px-8 py-4 -text--white hover:-bg--Amber hover:bg-opacity-50 cursor-pointer">

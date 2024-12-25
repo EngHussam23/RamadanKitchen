@@ -1,7 +1,7 @@
 const GeneratorForm = () => {
   return (
     <form
-      className="max-w-screen-2xl min-w-screen-MobileSM font-normal p-6"
+      className="max-w-screen-2xl min-w-screen-MobileSM font-normal px-6"
       method=""
     >
       <label>
